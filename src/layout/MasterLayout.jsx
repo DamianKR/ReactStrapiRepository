@@ -36,7 +36,7 @@ function MasterLayout() {
   return (
     <>
       <Navbar />
-      <Outlet />
+        <Outlet />
       <Footer />
     </>
   );

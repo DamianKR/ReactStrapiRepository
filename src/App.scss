@@ -1,7 +1,132 @@
 .App {
+  width: 100%;
+  min-height: 100%;
+  .link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 
-    .link {
-        color: inherit;
-        text-decoration: none;
+.products {
+  padding: 30px 50px;
+
+  .sidebar-products {
+    position: sticky;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    // box-shadow: 0 0px 4px rgba(0, 0, 0, 0.2);
+    // clip-path: inset(0px -15px 0px 0px);
+
+    .filterItem {
+      margin-bottom: 20px;
+      h2 {
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .inputItem {
+        margin-bottom: 5px;
+
+        label {
+          margin-left: 10px;
+        }
+      }
     }
+  }
+  .content-products {
+    .catImg {
+      height: 50vh;
+      object-fit: cover;
+    }
+  }
+}
+
+.product-detail {
+  padding: 20px 50px;
+  gap: 50px;
+
+  .product-details-sidebar {
+    flex: 1;
+    gap: 10px;
+    .images {
+      flex: 1;
+      gap: 10px;
+      img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        // height: 150px;
+        object-fit: cover;
+        cursor: pointer;
+      }
+    }
+    .mainImg {
+      flex: 6;
+
+      img {
+        width: 100%;
+        max-height: 70vh;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .product {
+    gap: 15px;
+    height: calc( 100vh - 90px );
+
+    .price {
+      font-size: 30px;
+      color: #421967;
+      font-weight: 600;
+    }
+
+    p {
+      font-style: 18px;
+      font-weight: 300;
+      text-align: justify;
+    }
+
+    .quantity {
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+      .btn {
+        padding: 10px 15px;
+      }
+    }
+
+    .btn {
+      color: #fff;
+      background-color: #421967;
+      padding: 15px;
+    }
+
+    .links {
+      gap: 20px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #421967;
+        font-size: 14px;
+      }
+    }
+
+     .info {
+      gap: 10px;
+      font-size: 14px;
+      margin-top: 30px;
+     }   
+     
+     .details {
+      gap: 10px;
+      font-size: 14px;
+
+      hr {
+        border: 1px solid rgb(238, 223, 223);
+      }
+     } 
+  }
 }
