@@ -3,13 +3,14 @@ import { useParams } from "react-router-dom";
 import Product from "../components/productDetails/Product";
 import useFetch from "../routing/useFetch";
 
+
 function ProductDetail() {
   const id = useParams().id;
   const [selectedImg, setSelectedImg] = useState("img");
 
-  const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
 
-  console.log('data', data?.attributes)
+  const { data, loading } = useFetch(`/products/${id}?populate=*`);
+
   return (
     <div className="product-detail d-flex">
       {loading ? (
@@ -47,7 +48,7 @@ function ProductDetail() {
               />
             </div>
           </div>
-          <Product product={data?.attributes}/>
+          <Product product={data?.attributes} productId={data?.id}/>
         </>
       )}
     </div>

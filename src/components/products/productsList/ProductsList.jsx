@@ -4,7 +4,7 @@ import FeaturedCard from "../../shared/cards/FeaturedCard";
 import "./ProductsList.scss";
 
 function ProductsList({ maxPrice, sort, selectedSubCats, catId }) {
-  const { data, loading, error } = useFetch(
+  const { data, loading } = useFetch(
     `/products?populate=*&[filters][categories][id]=${catId}${selectedSubCats.map(
       (item) => `&[filters][sub_categories][id][$eq]=${item}`
     )}&[filters][price][$lte]=${maxPrice}&sort=price:${ sort ? sort : 'asc'}`
