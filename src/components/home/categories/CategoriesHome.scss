@@ -1,0 +1,50 @@
+.categories-home {
+  // gap: 10px;
+
+  .rows {
+    height: 80vh;
+    overflow: hidden;
+    gap: 10px;
+    display: flex;
+
+    .cols {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cols-l {
+      flex: 2;
+      gap: 10px;
+    }
+
+    .rows {
+      flex: 1;
+      display: flex;
+      gap: 10;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      button {
+        min-width: 100px;
+        width: fit-content;
+        height: 50px;
+        padding: 10px;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-transform: uppercase;
+
+        .categories-home-link {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

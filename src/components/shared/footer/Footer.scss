@@ -1,14 +1,12 @@
 .footer {
-  padding: 100px 200px 20px 200px;
+//   padding: 100px 200px 20px 200px;
+box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
 
   .top-footer {
     display: flex;
     gap: 30px;
 
     .item-footer {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
       gap: 10px;
       text-align: justify;
       font-size: 14px;
